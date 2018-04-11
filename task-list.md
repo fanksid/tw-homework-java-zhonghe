@@ -20,7 +20,7 @@
 6. 编写MIAddStudent类的测试及对应的实现。(30分钟) 实际：(45分钟)
 	* 测试getName()
 	* 测试performAction() // 使用Mock模拟Student和GradeList
-7. 编写MIGenerateGradeList类的测试及对应的实现。(15分钟)
+7. 编写MIGenerateGradeList类的测试及对应的实现。(25分钟)
 	* 测试getName()
 	* 测试performAction() // 使用Mock模拟GradeList
 8. 编写Library类的测试及对应的实现。(30分钟)

@@ -21,6 +21,7 @@ public class MIAddStudentTest {
     @Test
     public void testMIAddStudent() {
         MIAddStudent miAddStudent = new MIAddStudent();
+        Assert.assertEquals("添加学生", miAddStudent.getName());
         GradeList gradeList = mock(GradeList.class);
 
         String input = "张三, 1, 数学: 75, 语文: 95, 英语: 80\n" +
