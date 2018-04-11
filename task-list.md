@@ -11,7 +11,7 @@
 	* 测试totalAverage()
 	* 测试totalMedian()
 	* 测试GradeList的构造器和display()
-4. 编写MenuItem类的测试及对应的实现。(10分钟)
+4. 编写MenuItem类的测试及对应的实现。(10分钟) 实际：4分钟
 	* 测试构造器和getName
 	* 测试performAction
 5. 编写Menu类的测试及对应的实现。(20分钟)
