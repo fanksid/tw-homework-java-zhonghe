@@ -3,6 +3,7 @@ package com.tw;
 public class Student {
     private String name;
     private int id;
+    // 虽然题目中成绩是整数，但根据自然定义，成绩应该是一个double
     private double[] grade;
     private double avgGrade;
     private double totalGrade;
@@ -17,6 +18,7 @@ public class Student {
     }
 
     // TODO: 使用Stream API改进求和计算
+    // TODO: 私有方法测试
     private double calcTotalGrade() {
         double sum = 0;
         for (int i = 0; i < Course.SIZE; i++) {
@@ -29,21 +31,19 @@ public class Student {
         return name;
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(String.format("姓名: %s, id: %d", getName(), id));
+        stringBuilder.append(String.format("姓名: %s, id: %d", getName(), getId()));
         for (int i = 0; i < Course.SIZE; i++) {
             String courseName = Course.getString(i);
             stringBuilder.append(", " + courseName + ": ");
 
-            // 确保当成绩为整数时，不输出小数点
-            double courseGrade = grade[i];
-            if (Util.floatIsInt(courseGrade)) {
-                stringBuilder.append(Math.round(courseGrade));
-            } else {
-                stringBuilder.append(courseGrade);
-            }
+            stringBuilder.append(Util.removeDecimalPointIfNecessary(grade[i]));
         }
         return stringBuilder.toString();
     }

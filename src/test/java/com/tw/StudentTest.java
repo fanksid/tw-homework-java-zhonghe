@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class StudentTest {
+    // TODO: 这里用的都是同一个学生，因此可以考虑把这个学生统一进行初始化
     @Test
     public void testToString() {
         Student student = new Student("superxc", 1, new double[]{60, 70, 100, 90});

@@ -7,7 +7,7 @@
 	* 测试getGrade()
 	* 测试getAvgGrade()
 	* 测试getTotalGrade()
-3. 编写GradeList类的测试及对应的实现。(30分钟)
+3. 编写GradeList类的测试及对应的实现。(30分钟) 实际：87分钟
 	* 测试totalAverage()
 	* 测试totalMedian()
 	* 测试GradeList的构造器和display()
@@ -28,4 +28,4 @@
 ## 原因分析
 1. 时间保守估算。
 2. 设计存在问题，关于需求的细节没有考虑到。设计不完善，临时引入了许多子任务。不够熟练，不知道Junit处理double相等。
-3. 
+3. 没有很好地估计写测试需要的时间。

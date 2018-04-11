@@ -10,4 +10,12 @@ public class Util {
     public static boolean doubleEqual(double d1, double d2) {
         return Math.abs(d1 - d2) < EPS;
     }
+
+    public static String removeDecimalPointIfNecessary(double x) {
+        if (floatIsInt(x)) {
+            return Math.round(x) + "";
+        } else {
+            return x + "";
+        }
+    }
 }
