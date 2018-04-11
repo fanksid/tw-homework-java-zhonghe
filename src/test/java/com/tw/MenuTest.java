@@ -44,8 +44,8 @@ public class MenuTest {
                 "请输入你的选择（1～3）：";
         Assert.assertEquals(systemOut(), result + result + result + result);
 
-        verify(menuItem1, times(1)).performAction(any());
-        verify(menuItem2, times(2)).performAction(any());
+        verify(menuItem1, times(1)).performAction(any(), any());
+        verify(menuItem2, times(2)).performAction(any(), any());
     }
 
     private String systemOut() {

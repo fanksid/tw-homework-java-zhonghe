@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
@@ -37,7 +38,7 @@ public class MIAddStudentTest {
                 "请按正确的格式输入（格式：姓名, 学号, 学科: 成绩, ...）：\n" +
                 "学生张三的成绩被添加\n";
 
-        miAddStudent.performAction(gradeList);
+        miAddStudent.performAction(gradeList, new Scanner(System.in));
 
         Assert.assertEquals(systemOut(), result);
         verify(gradeList, times(1)).addStudent(any());

@@ -10,9 +10,8 @@ public class MIGenerate extends MenuItem{
     }
 
     @Override
-    public void performAction(GradeList gradeList) {
+    public void performAction(GradeList gradeList, Scanner scanner) {
         System.out.print("请输入要打印的学生的学号（格式： 学号, 学号,...），按回车提交：\n");
-        Scanner scanner = new Scanner(System.in);
         while (true) {
             String line = scanner.nextLine();
             try {

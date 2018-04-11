@@ -28,13 +28,13 @@ public class Menu {
         while (true) {
             System.out.print(prompts);
             // TODO: 这里需要测试可能出现的Exception
-            int decision = scanner.nextInt();
+            int decision = Integer.parseInt(scanner.nextLine().trim());
 
             if (decision == menuItemSize + 1) {
                 break;
             }
 
-            menuItems.get(decision - 1).performAction(gradeList);
+            menuItems.get(decision - 1).performAction(gradeList, scanner);
         }
     }
 }

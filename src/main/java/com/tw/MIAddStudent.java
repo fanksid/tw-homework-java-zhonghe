@@ -8,8 +8,7 @@ public class MIAddStudent extends MenuItem{
         super("添加学生");
     }
 
-    public void performAction(GradeList gradeList) {
-        Scanner scanner = new Scanner(System.in);
+    public void performAction(GradeList gradeList, Scanner scanner) {
         System.out.print("请输入学生信息（格式：姓名, 学号, 学科: 成绩, ...），按回车提交：\n");
         while (true) {
             String line = scanner.nextLine();

@@ -9,6 +9,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import static org.mockito.Mockito.*;
 
@@ -41,7 +42,7 @@ public class MIGenerateTest{
         list.add(3);
         list.add(4);
 
-        miGenerate.performAction(gradeList);
+        miGenerate.performAction(gradeList, new Scanner(System.in));
         verify(gradeList, times(1)).display(list);
         verify(gradeList, times(1)).display(any());
     }
