@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
-    List<MenuItem> menuItems = new ArrayList<>();
+    private List<MenuItem> menuItems = new ArrayList<>();
 
     public void addMenuItem(MenuItem menuItem) {
         menuItems.add(menuItem);

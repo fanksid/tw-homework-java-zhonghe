@@ -14,10 +14,10 @@
 4. 编写MenuItem类的测试及对应的实现。(10分钟) 实际：4分钟
 	* 测试构造器和getName
 	* 测试performAction
-5. 编写Menu类的测试及对应的实现。(20分钟)
+5. 编写Menu类的测试及对应的实现。(20分钟) 实际: 50分钟
 	* 测试addMenuItem(), display() // 使用Mock模拟MenuItem
 	* 测试performAction() // 使用Mock模拟MenuItem
-6. 编写MIAddStudent类的测试及对应的实现。(20分钟)
+6. 编写MIAddStudent类的测试及对应的实现。(30分钟) 实际：(45分钟)
 	* 测试getName()
 	* 测试performAction() // 使用Mock模拟Student和GradeList
 7. 编写MIGenerateGradeList类的测试及对应的实现。(15分钟)
@@ -29,3 +29,6 @@
 1. 时间保守估算。
 2. 设计存在问题，关于需求的细节没有考虑到。设计不完善，临时引入了许多子任务。不够熟练，不知道Junit处理double相等。
 3. 没有很好地估计写测试需要的时间。
+4. 略
+5. 写测试花了比较多的时间。
+6. 写测试和处理数据花了比较多的时间。
