@@ -1,7 +1,5 @@
 package com.tw;
 
-import java.util.Scanner;
-
 public class Library {
     public static void main(String[] args) {
         Menu menu = new Menu();

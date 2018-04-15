@@ -1,5 +1,7 @@
 package com.tw;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MIAddStudent extends MenuItem{
@@ -23,7 +25,7 @@ public class MIAddStudent extends MenuItem{
                 }
                 String name = elems[0].trim();
                 int stuNo = Integer.parseInt(elems[1].trim());
-                double[] grades = new double[courseSize];
+                List<Double> grades = new ArrayList<>();
                 fillGrade(courseSize, elems, grades);
 
                 gradeList.addStudent(new Student(name, stuNo, grades));
@@ -35,10 +37,10 @@ public class MIAddStudent extends MenuItem{
         }
     }
 
-    private void fillGrade(int courseSize, String[] elems, double[] grades) throws Exception {
+    private void fillGrade(int courseSize, String[] elems, List<Double> grades) throws Exception {
         // 初始化为一个非法值，用于后面检查是否所有课程都有成绩
         for (int i = 0; i < courseSize; i++) {
-            grades[i] = -1;
+            grades.add(-1.0);
         }
 
         // 复杂度O(n^2)
@@ -47,13 +49,13 @@ public class MIAddStudent extends MenuItem{
             String courseName = courseNameAndGrade[0].trim();
             for (int j = 0; j < courseSize; j++) {
                 if (Course.getString(j).equals(courseName)) {
-                    grades[j] = Double.parseDouble(courseNameAndGrade[1]);
+                    grades.set(j, Double.parseDouble(courseNameAndGrade[1]));
                 }
             }
         }
 
         for (int i = 0; i < courseSize; i++) {
-            if (grades[i] < 0) {
+            if (grades.get(i) < 0) {
                 throw new Exception("格式不正确");
             }
         }

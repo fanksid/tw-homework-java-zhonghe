@@ -1,6 +1,5 @@
 package com.tw;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -27,7 +26,6 @@ public class Menu {
 
         while (true) {
             System.out.print(prompts);
-            // TODO: 这里需要测试可能出现的Exception
             int decision = Integer.parseInt(scanner.nextLine().trim());
 
             if (decision == menuItemSize + 1) {
